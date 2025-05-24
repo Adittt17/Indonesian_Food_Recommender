@@ -76,3 +76,12 @@ elif dish_type == "Spicy":
     if main_ingredient == "Chicken":
         recommendation = "Ayam Balado"
         cf_recomm_
+
+
+# Show result
+if st.button("Process"):
+    st.subheader("Inference Result")
+    st.write(f"**Dish Type:** {dish_type}")
+    st.write(f"**Dish Type Confidence Level:** {verbal_cf(cf_dish_type)}")
+    st.write(f"**Recommendation:** {recommendation}")
+    st.write(f"**Recommendation Confidence Level:** {verbal_cf(cf_recommendation)}")
